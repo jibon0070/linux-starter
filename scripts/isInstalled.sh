@@ -1,6 +1,6 @@
 #!/bin/bash
 
-isInstalled() {
+function isInstalled {
 	if ! [ -v 1 ]; then
 		echo "No package name given."
 		exit 1
@@ -20,3 +20,4 @@ isInstalled() {
 	fi
 	return 0
 }
+export -f isInstalled
