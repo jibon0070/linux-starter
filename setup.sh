@@ -24,11 +24,11 @@ $builddir/scripts/handle-config.sh
 # Install build-essential
 $builddir/scripts/install/build-essential.sh
 
-#install neovim
-$builddir/scripts/install/nvim/nvim.sh
-
 #install nodejs
 $builddir/scripts/install/nodejs.sh
+
+#install neovim
+$builddir/scripts/install/nvim/nvim.sh
 
 # install docker
 # install chrome
