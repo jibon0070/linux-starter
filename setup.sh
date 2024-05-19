@@ -22,7 +22,9 @@ apt update
 apt upgrade -y
 
 # Install nala
-apt install nala -y
+if ! isInstalled nala; then
+	apt install nala -y
+fi
 
 # Install Terminus Fonts
 sudo nala install fonts-terminus
