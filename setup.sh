@@ -7,14 +7,7 @@ if [[ $EUID -ne 0 ]]; then
 fi
 
 source scripts/variables.sh
-
-isInstalled() {
-	local output=$(apt-cache search $1 | grep "^$1" | wc -l)
-	if [[ $output -gt 0 ]]; then
-		return 0
-	fi
-	return 1
-}
+source scripts/isInstalled.sh
 
 # Update packages list and update system
 apt update
