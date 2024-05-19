@@ -19,13 +19,10 @@ cd $builddir/scripts
 ./update.sh
 cd $builddir
 
-# Install Terminus Fonts
-if ! isInstalled fonts-terminus; then
-	sudo nala install fonts-terminus
-fi
-
-# Set the font to Terminus Fonts
-setfont /usr/share/consolefonts/Uni3-TerminusBold28x14.psf.gz
+# set fonts
+cd $builddir/scripts
+./set-fonts.sh
+cd $builddir
 
 # Making .config and Moving config files
 cd $builddir
