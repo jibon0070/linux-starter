@@ -18,17 +18,8 @@ $builddir/scripts/update.sh
 # set fonts
 $builddir/scripts/set-fonts.sh
 
-# Making .config and Moving config files
-cd $builddir
-
-if [[ ! -d /home/$username/.config ]]; then
-	mkdir -p /home/$username/.config
-	chown $username:$username /home/$username/.config
-fi
-if [[ -d /home/$username/dotconfig ]]; then
-	cp -R dotconfig/* /home/$username/.config/
-	chown $username:$username /home/$username/.config -R
-fi
+# handle .config files
+$builddir/scripts/handle-config.sh
 
 # Install build-essential
 if !isInstalled build-essential; then
