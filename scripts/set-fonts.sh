@@ -9,4 +9,7 @@ fi
 # Set the font to Terminus Fonts
 setfont /usr/share/consolefonts/Uni3-TerminusBold28x14.psf.gz
 
+# Reloading Font
+fc-cache -vf
+
 exit 0
