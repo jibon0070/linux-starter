@@ -21,3 +21,15 @@ apt upgrade -y
 
 # Install nala
 apt install nala -y
+
+# Making .config and Moving config files
+cd $builddir
+
+if [[ ! -d /home/$username/.config ]]; then
+	mkdir -p /home/$username/.config
+	chown $username:$username /home/$username/.config
+fi
+if [[ ! -d dotconfig ]]; then
+	cp -R dotconfig/* /home/$username/.config/
+	chown $username:$username /home/$username/.config -R
+fi
