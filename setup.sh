@@ -22,9 +22,7 @@ $builddir/scripts/set-fonts.sh
 $builddir/scripts/handle-config.sh
 
 # Install build-essential
-if !isInstalled build-essential; then
-	nala install build-essential -y
-fi
+$builddir/scripts/install/build-essential.sh
 
 #install neovim
 if ! isInstalled nvim; then
