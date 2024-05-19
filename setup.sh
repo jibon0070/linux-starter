@@ -14,7 +14,10 @@ cd $builddir/scripts/install
 ./nala.sh
 cd $builddir
 
-./scripts/update.sh
+# update
+cd $builddir/scripts
+./update.sh
+cd $builddir
 
 # Install Terminus Fonts
 if ! isInstalled fonts-terminus; then
