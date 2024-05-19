@@ -9,7 +9,10 @@ fi
 source scripts/variables.sh
 source scripts/isInstalled.sh
 
-./scripts/install/nala.sh
+# install nala
+cd $builddir/scripts/install
+./nala.sh
+cd $builddir
 
 ./scripts/update.sh
 
