@@ -29,7 +29,7 @@ if [[ ! -d /home/$username/.config ]]; then
 	mkdir -p /home/$username/.config
 	chown $username:$username /home/$username/.config
 fi
-if [[ ! -d dotconfig ]]; then
+if [[ -d /home/$username/dotconfig ]]; then
 	cp -R dotconfig/* /home/$username/.config/
 	chown $username:$username /home/$username/.config -R
 fi
