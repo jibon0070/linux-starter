@@ -46,8 +46,10 @@ if [[ -d /home/$username/dotconfig ]]; then
 	chown $username:$username /home/$username/.config -R
 fi
 
-# Installing Programs
-nala install build-essential -y
+# Install build-essential
+if !isInstalled build-essential; then
+	nala install build-essential -y
+fi
 
 #install neovim
 if [[ ! -d $builddir/nvim ]]; then
