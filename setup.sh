@@ -12,10 +12,7 @@ source scripts/isInstalled.sh
 # Update packages list and update system
 ./scripts/update.sh
 
-# Install nala
-if ! isInstalled nala; then
-	apt install nala -y
-fi
+./scripts/install/nala.sh
 
 # Install Terminus Fonts
 if ! isInstalled fonts-terminus; then
