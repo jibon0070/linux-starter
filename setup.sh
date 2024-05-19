@@ -26,21 +26,9 @@ $builddir/scripts/install/build-essential.sh
 
 #install neovim
 $builddir/scripts/install/nvim/nvim.sh
-exit 0
 
 #install nodejs
-if ! isInstalled nodejs; then
-	nala install nodejs
-fi
-if ! isInstalled npm; then
-	nala install npm
-fi
-
-#update node version
-if $(npm list -g --depth=0 | grep " n@" | wc -l) -gt 0; then
-	npm i -g n
-	n lts
-fi
+$builddir/scripts/install/nodejs.sh
 
 # install docker
 if $(apt-cache search docker | grep -E "^docker-(buildx|clean|compose|compose-v2|doc|registry|io|buildx-plugin|ce-cli|ce-rootless-extras|ce|compose-plugin)" | wc -l) -lt 11; then
