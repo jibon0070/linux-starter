@@ -9,6 +9,14 @@ fi
 username=$(id -u -n 1000)
 builddir=$(pwd)
 
+isInstalled() {
+	local output=$(apt-cache search $1 | grep "^$1" | wc -l)
+	if [[ $output -gt 0 ]]; then
+		return 0
+	fi
+	return 1
+}
+
 # Install Terminus Fonts
 sudo apt install fonts-terminus
 
