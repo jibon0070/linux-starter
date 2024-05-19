@@ -1,7 +1,5 @@
 #!/bin/bash
 
-source isInstalled.sh
-
 if ! isInstalled fonts-terminus; then
 	nala install fonts-terminus -y --simple
 else
