@@ -31,3 +31,5 @@ $builddir/scripts/install/nvim/nvim.sh
 $builddir/scripts/install/nodejs.sh
 
 # install docker
+# install chrome
+# install gitbutler
