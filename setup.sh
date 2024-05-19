@@ -27,7 +27,9 @@ if ! isInstalled nala; then
 fi
 
 # Install Terminus Fonts
-sudo nala install fonts-terminus
+if ! isInstalled fonts-terminus; then
+	sudo nala install fonts-terminus
+fi
 
 # Set the font to Terminus Fonts
 setfont /usr/share/consolefonts/Uni3-TerminusBold28x14.psf.gz
