@@ -55,3 +55,7 @@ rm -rf nvim
 
 #install nodejs
 nala install nodejs npm -y
+
+#update node version
+npm i -g n
+n lts
