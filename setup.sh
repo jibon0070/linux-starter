@@ -10,9 +10,7 @@ source scripts/variables.sh
 source scripts/isInstalled.sh
 
 # install nala
-cd $builddir/scripts/install
-./nala.sh
-cd $builddir
+$builddir/scripts/install/nala.sh
 
 # update
 cd $builddir/scripts
