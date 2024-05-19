@@ -13,9 +13,7 @@ source scripts/isInstalled.sh
 $builddir/scripts/install/nala.sh
 
 # update
-cd $builddir/scripts
-./update.sh
-cd $builddir
+$builddir/scripts/update.sh
 
 # set fonts
 cd $builddir/scripts
