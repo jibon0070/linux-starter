@@ -1,3 +1,3 @@
 #!/bin/bash
 
-nala upgrade -y
+nala upgrade -y --simple
