@@ -4,7 +4,7 @@ if ! isInstalled npm; then
 	nala install npm
 else
 	if [ $(npm -v | grep -E "^[0-9]+\.[0-9]+\.[0-9]+$" | wc -l) -eq 0 ]; then
-		nala install npm
+		nala install npm -y --simple
 	else
 		echo "npm is already installed! skipping install."
 	fi
