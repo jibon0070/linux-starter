@@ -8,3 +8,9 @@ fi
 
 username=$(id -u -n 1000)
 builddir=$(pwd)
+
+# Install Terminus Fonts
+sudo apt install fonts-terminus
+
+# Set the font to Terminus Fonts
+setfont /usr/share/consolefonts/Uni3-TerminusBold28x14.psf.gz
