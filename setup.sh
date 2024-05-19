@@ -25,22 +25,8 @@ $builddir/scripts/handle-config.sh
 $builddir/scripts/install/build-essential.sh
 
 #install neovim
-if ! isInstalled nvim; then
-	if [[ ! -d $builddir/nvim ]]; then
-		if [[ $(git clone https://github.com/jibon0070/nvim-kick-starter.git nvim) ]]; then
-			echo "Failed to clone nvim"
-			exit 1
-		fi
-	fi
-	cd $builddir/nvim
-	./setup.sh
-	if [[ $? -ne 0 ]]; then
-		echo "Failed to install nvim"
-		exit 1
-	fi
-	cd $builddir
-	rm -rf nvim
-fi
+$builddir/scripts/install/nvim/nvim.sh
+exit 0
 
 #install nodejs
 if ! isInstalled nodejs; then
