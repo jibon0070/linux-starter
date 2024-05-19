@@ -6,8 +6,7 @@ if [[ $EUID -ne 0 ]]; then
 	exit 1
 fi
 
-username=$(id -u -n 1000)
-builddir=$(pwd)
+source scripts/variables.sh
 
 isInstalled() {
 	local output=$(apt-cache search $1 | grep "^$1" | wc -l)
