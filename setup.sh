@@ -30,8 +30,9 @@ $builddir/scripts/install/nodejs.sh
 #install neovim
 $builddir/scripts/install/nvim/nvim.sh
 
-# install docker
-
 # install chrome
+$builddir/scripts/install/chrome/chrome.sh
+
+# install docker
 
 # install gitbutler
