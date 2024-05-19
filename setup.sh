@@ -78,8 +78,10 @@ if ! isInstalled npm; then
 fi
 
 #update node version
-npm i -g n
-n lts
+if $(npm list -g --depth=0 | grep " n@" | wc -l) -gt 0; then
+	npm i -g n
+	n lts
+fi
 
 # install docker
 if ! isInstalled docker; then
