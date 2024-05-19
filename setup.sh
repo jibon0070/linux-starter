@@ -36,3 +36,19 @@ fi
 
 # Installing Programs
 nala install build-essential -y
+
+#install neovim
+if [[ ! -d $builddir/nvim ]]; then
+	if [[ $(git clone https://github.com/jibon0070/nvim-kick-starter.git nvim) ]]; then
+		echo "Failed to clone nvim"
+		exit 1
+	fi
+fi
+cd $builddir/nvim
+./setup.sh
+if [[ $? -ne 0 ]]; then
+	echo "Failed to install nvim"
+	exit 1
+fi
+cd $builddir
+rm -rf nvim
