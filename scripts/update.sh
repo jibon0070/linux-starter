@@ -1,4 +1,4 @@
 #!/bin/bash
 
-apt update
-apt upgrade -y
+nala update
+nala upgrade -y
