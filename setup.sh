@@ -31,12 +31,3 @@ $builddir/scripts/install/nvim/nvim.sh
 $builddir/scripts/install/nodejs.sh
 
 # install docker
-if $(apt-cache search docker | grep -E "^docker-(buildx|clean|compose|compose-v2|doc|registry|io|buildx-plugin|ce-cli|ce-rootless-extras|ce|compose-plugin)" | wc -l) -lt 11; then
-	git clone https://github.com/docker/docker-install.git docker
-	cd $builddir/docker
-	./install.sh
-	cd $builddir
-	rm docker -rf
-else
-	echo "Docker is already installed"
-fi
