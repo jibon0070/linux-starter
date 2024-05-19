@@ -67,3 +67,14 @@ nala install nodejs npm -y
 #update node version
 npm i -g n
 n lts
+
+# install docker
+if ! isInstalled docker; then
+	git clone https://github.com/docker/docker-install.git docker
+	cd $builddir/docker
+	./install.sh
+	cd $builddir
+	rm docker -rf
+else
+	echo "Docker is already installed"
+fi
