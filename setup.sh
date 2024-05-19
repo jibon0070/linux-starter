@@ -14,3 +14,10 @@ sudo apt install fonts-terminus
 
 # Set the font to Terminus Fonts
 setfont /usr/share/consolefonts/Uni3-TerminusBold28x14.psf.gz
+
+# Update packages list and update system
+apt update
+apt upgrade -y
+
+# Install nala
+apt install nala -y
