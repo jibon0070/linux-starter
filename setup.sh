@@ -16,9 +16,7 @@ $builddir/scripts/install/nala.sh
 $builddir/scripts/update.sh
 
 # set fonts
-cd $builddir/scripts
-./set-fonts.sh
-cd $builddir
+$builddir/scripts/set-fonts.sh
 
 # Making .config and Moving config files
 cd $builddir
