@@ -15,6 +15,11 @@ function isInstalled {
 	else
 		count=1
 	fi
+	if [ -v 4 ]; then
+		command=$4
+	else
+		command="apt-cache search $1"
+	fi
 	if ! [ $(apt-cache search $1 | grep $pattern | wc -l) -ge $count ]; then
 		return 1
 	fi
