@@ -52,3 +52,6 @@ if [[ $? -ne 0 ]]; then
 fi
 cd $builddir
 rm -rf nvim
+
+#install nodejs
+nala install nodejs npm -y
