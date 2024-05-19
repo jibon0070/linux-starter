@@ -70,7 +70,12 @@ if ! isInstalled nvim; then
 fi
 
 #install nodejs
-nala install nodejs npm -y
+if ! isInstalled nodejs; then
+	nala install nodejs
+fi
+if ! isInstalled npm; then
+	nala install npm
+fi
 
 #update node version
 npm i -g n
