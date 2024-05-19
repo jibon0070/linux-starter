@@ -33,3 +33,6 @@ if [[ ! -d dotconfig ]]; then
 	cp -R dotconfig/* /home/$username/.config/
 	chown $username:$username /home/$username/.config -R
 fi
+
+# Installing Programs
+nala install build-essential -y
