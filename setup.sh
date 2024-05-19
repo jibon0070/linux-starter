@@ -9,10 +9,9 @@ fi
 source scripts/variables.sh
 source scripts/isInstalled.sh
 
-# Update packages list and update system
-./scripts/update.sh
-
 ./scripts/install/nala.sh
+
+./scripts/update.sh
 
 # Install Terminus Fonts
 if ! isInstalled fonts-terminus; then
