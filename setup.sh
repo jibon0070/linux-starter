@@ -84,7 +84,7 @@ if $(npm list -g --depth=0 | grep " n@" | wc -l) -gt 0; then
 fi
 
 # install docker
-if ! isInstalled docker; then
+if $(apt-cache search docker | grep -E "^docker-(buildx|clean|compose|compose-v2|doc|registry|io|buildx-plugin|ce-cli|ce-rootless-extras|ce|compose-plugin)" | wc -l) -lt 11; then
 	git clone https://github.com/docker/docker-install.git docker
 	cd $builddir/docker
 	./install.sh
