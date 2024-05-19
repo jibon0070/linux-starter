@@ -10,8 +10,7 @@ source scripts/variables.sh
 source scripts/isInstalled.sh
 
 # Update packages list and update system
-apt update
-apt upgrade -y
+./scripts/update.sh
 
 # Install nala
 if ! isInstalled nala; then
