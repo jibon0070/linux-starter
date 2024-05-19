@@ -1,4 +1,4 @@
 #!/bin/bash
 
-username=$(id -u -n 1000)
-builddir=$(pwd)
+export username=$(id -u -n 1000)
+export builddir=$(pwd)
