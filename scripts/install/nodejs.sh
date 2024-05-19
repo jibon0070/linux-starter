@@ -11,10 +11,7 @@ else
 fi
 
 if ! isInstalled n "\sn@" 1 "npm list -g --depth=0"; then
-	if npm i -g n; then
-		echo "reboot"
-		exit 1
-	fi
+	npm i -g n
 else
 	echo "n is already installed! skipping install."
 fi
