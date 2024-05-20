@@ -16,9 +16,6 @@ else
 	echo "n is already installed! skipping install."
 fi
 
-if n lts; then
-	echo "reboot"
-	exit 1
-fi
+n lts
 
 exit 0
