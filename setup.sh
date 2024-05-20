@@ -9,11 +9,11 @@ fi
 source scripts/variables.sh
 source scripts/isInstalled.sh
 
-# install nala
-$builddir/scripts/install/nala.sh
-
 # update
 $builddir/scripts/update.sh
+
+# install nala
+$builddir/scripts/install/nala.sh
 
 # set fonts
 $builddir/scripts/set-fonts.sh

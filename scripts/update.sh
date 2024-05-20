@@ -1,4 +1,5 @@
 #!/bin/bash
 
-nala upgrade -y --simple
+apt update -y
+apt upgrade -y
 exit 0
