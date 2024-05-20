@@ -39,3 +39,6 @@ $builddir/scripts/install/chrome/chrome.sh
 
 # setup gui
 $builddir/scripts/setup-gui.sh
+
+# setup autio
+$builddir/scripts/setup-audio.sh
