@@ -9,11 +9,11 @@ fi
 source scripts/variables.sh
 source scripts/isInstalled.sh
 
-# install nala
-$builddir/scripts/install/nala.sh
-
 # update
 $builddir/scripts/update.sh
+
+# install nala
+$builddir/scripts/install/nala.sh
 
 # set fonts
 $builddir/scripts/set-fonts.sh
@@ -30,8 +30,18 @@ $builddir/scripts/install/nodejs.sh
 #install neovim
 $builddir/scripts/install/nvim/nvim.sh
 
+# install chrome
+$builddir/scripts/install/chrome/chrome.sh
+
 # install docker
 
-# install chrome
-
 # install gitbutler
+
+# setup gui
+$builddir/scripts/setup-gui.sh
+
+# setup autio
+$builddir/scripts/setup-audio.sh
+
+#set up i3wm
+$builddir/scripts/setup-i3wm.sh
