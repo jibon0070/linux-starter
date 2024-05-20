@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if ! isInstalled lightdm; then
-	nala install lightdm -y
+	nala install lightdm -y --simple
 fi
 
 systemctl enable lightdm
