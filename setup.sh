@@ -42,3 +42,6 @@ $builddir/scripts/setup-gui.sh
 
 # setup autio
 $builddir/scripts/setup-audio.sh
+
+#set up i3wm
+$builddir/scripts/setup-i3wm.sh
