@@ -10,4 +10,6 @@ cd $builddir/i3wm
 ./setup.sh
 cd $builddir
 
+rm $builddir/i3wm -rf
+
 exit 0
