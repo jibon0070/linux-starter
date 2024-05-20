@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if ! isinstalled lightdm; then
+if ! isInstalled lightdm; then
 	nala install lightdm
 fi
 
