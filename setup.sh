@@ -45,3 +45,7 @@ $builddir/scripts/setup-audio.sh
 
 #set up i3wm
 $builddir/scripts/setup-i3wm.sh
+
+reboot
+
+exit 0
