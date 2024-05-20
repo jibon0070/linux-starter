@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if ! isInstalled npm; then
-	nala install npm
+	nala install npm -y --simple
 else
 	echo "npm is already installed! skipping install."
 fi
