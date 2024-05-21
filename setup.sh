@@ -36,6 +36,7 @@ $builddir/scripts/install/chrome/chrome.sh
 # install docker
 
 # install gitbutler
+$builddir/scripts/install/gitbutler/install.sh
 
 # setup gui
 $builddir/scripts/setup-gui.sh
